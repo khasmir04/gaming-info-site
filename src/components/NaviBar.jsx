@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const NaviBar = (props) => {
-  const [navbar, setNavbar] = useState(false);
+  const [navbar, setNavbar] = useState(false)
 
   return (
     <nav className='w-full bg-[#1E1E1E] shadow'>
@@ -114,7 +114,7 @@ const NaviBar = (props) => {
         </div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default NaviBar;
+export default NaviBar

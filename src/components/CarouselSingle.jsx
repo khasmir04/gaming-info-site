@@ -1,4 +1,4 @@
-import Slider from 'react-slick';
+import Slider from 'react-slick'
 
 const CarouselSingle = ({ children }) => {
   let settings = {
@@ -8,8 +8,8 @@ const CarouselSingle = ({ children }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-  };
-  return <Slider {...settings}>{children}</Slider>;
-};
+  }
+  return <Slider {...settings}>{children}</Slider>
+}
 
-export default CarouselSingle;
+export default CarouselSingle

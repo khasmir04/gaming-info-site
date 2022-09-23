@@ -1,10 +1,10 @@
-import { getSingleGame } from '../service/api';
-import { useState, useEffect } from 'react';
-import Footer from './Footer';
-import NaviBar from './NaviBar';
-import { useParams } from 'react-router-dom';
-import { SpinnerDotted } from 'spinners-react';
-import CarouselSingle from './CarouselSingle';
+import { getSingleGame } from '../service/api'
+import { useState, useEffect } from 'react'
+import Footer from './Footer'
+import NaviBar from './NaviBar'
+import { useParams } from 'react-router-dom'
+import { SpinnerDotted } from 'spinners-react'
+import CarouselSingle from './CarouselSingle'
 
 const SinglePage = () => {
   const [game, setGame] = useState({
@@ -46,9 +46,9 @@ const SinglePage = () => {
         image: '',
       },
     ],
-  });
-  const [isLoading, setIsLoading] = useState(true);
-  const { id } = useParams();
+  })
+  const [isLoading, setIsLoading] = useState(true)
+  const { id } = useParams()
   const {
     genre,
     platform,
@@ -66,19 +66,19 @@ const SinglePage = () => {
       graphics,
       storage,
     } = {},
-  } = game;
+  } = game
 
   useEffect(() => {
     const getGame = async () => {
-      setIsLoading(true);
+      setIsLoading(true)
       setTimeout(async () => {
-        const result = await getSingleGame(id);
-        setGame(result.data);
-        setIsLoading(false);
-      }, 1000);
-    };
-    getGame();
-  }, [id]);
+        const result = await getSingleGame(id)
+        setGame(result.data)
+        setIsLoading(false)
+      }, 1000)
+    }
+    getGame()
+  }, [id])
 
   return (
     <div className='bg-[#291D24]'>
@@ -111,7 +111,7 @@ const SinglePage = () => {
                           alt='content'
                         ></img>
                       </div>
-                    );
+                    )
                   })}
               </CarouselSingle>
               <div className='flex flex-col sm:flex-row mt-10'>
@@ -185,6 +185,6 @@ const SinglePage = () => {
       </section>
       <Footer title='Games' />
     </div>
-  );
-};
-export default SinglePage;
+  )
+}
+export default SinglePage

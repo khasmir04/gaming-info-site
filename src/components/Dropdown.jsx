@@ -57,15 +57,13 @@ const Dropdown = (props) => {
         value={value}
         onChange={onChange}
       >
-        {categories
-          .sort()
-          .map((item, index) => {
-            return (
-              <option key={index} value={item}>
-                {item}
-              </option>
-            )
-          })}
+        {categories.sort().map((item, index) => {
+          return (
+            <option key={index} value={item}>
+              {item}
+            </option>
+          )
+        })}
       </select>
     </div>
   )

@@ -1,15 +1,15 @@
-import { Link } from 'react-router-dom';
-import Footer from './Footer';
-import NaviBar from './NaviBar';
-import { useEffect } from 'react';
-import Contact from './Contact';
-import Aos from 'aos';
+import { Link } from 'react-router-dom'
+import Footer from './Footer'
+import NaviBar from './NaviBar'
+import { useEffect } from 'react'
+import Contact from './Contact'
+import Aos from 'aos'
 
 const About = () => {
   useEffect(() => {
-    document.title = 'Game On | ABOUT';
-    Aos.init();
-  }, []);
+    document.title = 'Game On | ABOUT'
+    Aos.init()
+  }, [])
 
   return (
     <div>
@@ -254,7 +254,7 @@ const About = () => {
       </section>
       <Footer title='About' />
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About

@@ -1,11 +1,11 @@
-import Footer from './Footer';
-import NaviBar from './NaviBar';
-import { useEffect } from 'react';
+import Footer from './Footer'
+import NaviBar from './NaviBar'
+import { useEffect } from 'react'
 
 const PageNotFound = () => {
   useEffect(() => {
-    document.title = '404: Page Not Found';
-  }, []);
+    document.title = '404: Page Not Found'
+  }, [])
   return (
     <div className='bg-[#291D24] h-screen flex flex-col justify-between'>
       <NaviBar />
@@ -14,7 +14,7 @@ const PageNotFound = () => {
       </p>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default PageNotFound;
+export default PageNotFound

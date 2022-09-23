@@ -1,4 +1,4 @@
-import Slider from 'react-slick';
+import Slider from 'react-slick'
 
 const Carousel = (props) => {
   var settings = {
@@ -50,8 +50,8 @@ const Carousel = (props) => {
         },
       },
     ],
-  };
-  return <Slider {...settings}>{props.children}</Slider>;
-};
+  }
+  return <Slider {...settings}>{props.children}</Slider>
+}
 
-export default Carousel;
+export default Carousel

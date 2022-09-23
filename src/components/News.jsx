@@ -1,28 +1,28 @@
-import { SpinnerDotted } from 'spinners-react';
-import { useState, useEffect } from 'react';
-import { getAllNews } from '../service/api';
-import Footer from './Footer';
-import NaviBar from './NaviBar';
-import AOS from 'aos';
+import { SpinnerDotted } from 'spinners-react'
+import { useState, useEffect } from 'react'
+import { getAllNews } from '../service/api'
+import Footer from './Footer'
+import NaviBar from './NaviBar'
+import AOS from 'aos'
 
 const AllNews = () => {
-  const [news, setNews] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [news, setNews] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
   const getNewsList = async () => {
-    setIsLoading(true);
+    setIsLoading(true)
     setTimeout(async () => {
-      const result = await getAllNews();
-      setNews(result.data);
-      setIsLoading(false);
-    }, 1000);
-  };
+      const result = await getAllNews()
+      setNews(result.data)
+      setIsLoading(false)
+    }, 1000)
+  }
 
   useEffect(() => {
-    document.title = 'Game On | NEWS';
-    getNewsList();
-    AOS.init();
-  }, []);
+    document.title = 'Game On | NEWS'
+    getNewsList()
+    AOS.init()
+  }, [])
 
   //TODO: Spacing (Footer)
   return (
@@ -49,7 +49,7 @@ const AllNews = () => {
           {news &&
             !isLoading &&
             news.map((news, index) => {
-              const { title, image, date, description, link } = news;
+              const { title, image, date, description, link } = news
               return (
                 <div
                   data-aos='fade-up'
@@ -84,13 +84,13 @@ const AllNews = () => {
                     </div>
                   </div>
                 </div>
-              );
+              )
             })}
         </div>
       </div>
       <Footer title='News' />
     </div>
-  );
-};
+  )
+}
 
-export default AllNews;
+export default AllNews

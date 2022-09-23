@@ -1,17 +1,17 @@
-import React from 'react';
-import Footer from './Footer';
-import LatestGames from './LatestGames';
-import NaviBar from './NaviBar';
-import { Link } from 'react-router-dom';
-import LatestNews from './LatestNews';
-import { useEffect } from 'react';
-import AOS from 'aos';
+import React from 'react'
+import Footer from './Footer'
+import LatestGames from './LatestGames'
+import NaviBar from './NaviBar'
+import { Link } from 'react-router-dom'
+import LatestNews from './LatestNews'
+import { useEffect } from 'react'
+import AOS from 'aos'
 
 const Hero = () => {
   useEffect(() => {
-    document.title = 'Game On | HOME';
-    AOS.init();
-  }, []);
+    document.title = 'Game On | HOME'
+    AOS.init()
+  }, [])
   return (
     <div>
       <NaviBar title='Home' />
@@ -133,7 +133,7 @@ const Hero = () => {
       </div>
       <Footer title='Home' />
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

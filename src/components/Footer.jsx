@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = (props) => {
-  const currentYear = new Date();
+  const currentYear = new Date()
 
   return (
     <footer className='bg-gray-200 text-center lg:text-left'>
@@ -72,7 +72,7 @@ const Footer = (props) => {
         </p>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

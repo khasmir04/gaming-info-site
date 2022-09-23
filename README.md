@@ -1,1 +1,1 @@
-Our Mini-Project 2 at KodeGo Bootcamp 2022
+Gaming info website showcasing the use of React, Tailwind, RapidAPI and other tools/libraries.

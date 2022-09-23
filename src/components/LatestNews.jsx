@@ -1,26 +1,26 @@
-import { SpinnerDotted } from 'spinners-react';
-import { useState, useEffect } from 'react';
-import { getAllNews } from '../service/api';
-import { Link } from 'react-router-dom';
-import AOS from 'aos';
+import { SpinnerDotted } from 'spinners-react'
+import { useState, useEffect } from 'react'
+import { getAllNews } from '../service/api'
+import { Link } from 'react-router-dom'
+import AOS from 'aos'
 
 const AllNews = () => {
-  const [news, setNews] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [news, setNews] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
   const getNewsList = async () => {
-    setIsLoading(true);
+    setIsLoading(true)
     setTimeout(async () => {
-      const result = await getAllNews();
-      setNews(result.data);
-      setIsLoading(false);
-    }, 500);
-  };
+      const result = await getAllNews()
+      setNews(result.data)
+      setIsLoading(false)
+    }, 500)
+  }
 
   useEffect(() => {
-    getNewsList();
-    AOS.init();
-  }, []);
+    getNewsList()
+    AOS.init()
+  }, [])
 
   return (
     <div className='bg-[#261F1F]'>
@@ -41,7 +41,7 @@ const AllNews = () => {
           {news &&
             !isLoading &&
             news.slice(0, 3).map((news, index) => {
-              const { title, image, date, description, link } = news;
+              const { title, image, date, description, link } = news
 
               return (
                 <div
@@ -83,12 +83,12 @@ const AllNews = () => {
                     </button>
                   </div>
                 </div>
-              );
+              )
             })}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AllNews;
+export default AllNews

@@ -1,14 +1,14 @@
-import React from 'react';
-import { useForm, ValidationError } from '@formspree/react';
-import { useEffect } from 'react';
-import AOS from 'aos';
+import React from 'react'
+import { useForm, ValidationError } from '@formspree/react'
+import { useEffect } from 'react'
+import AOS from 'aos'
 
 function Contact() {
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
 
-  const [state, handleSubmit] = useForm('xpzndqzp');
+  const [state, handleSubmit] = useForm('xpzndqzp')
   if (state.succeeded) {
     return (
       <div className='bg-[#201B1B]'>
@@ -16,7 +16,7 @@ function Contact() {
           Thank you for submitting!
         </p>
       </div>
-    );
+    )
   }
   return (
     <div className='bg-[#201B1B] w-full py-10'>
@@ -68,6 +68,6 @@ function Contact() {
         </form>
       </div>
     </div>
-  );
+  )
 }
-export default Contact;
+export default Contact
