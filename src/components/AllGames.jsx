@@ -46,7 +46,7 @@ const AllGames = () => {
   }, [category, keyword])
 
   return (
-    <div className='bg-[#291D24]'>
+    <div className='bg-[#291D24] flex flex-col justify-between min-h-[calc(100vh-352px)]'>
       <NaviBar title='Games' />
       <div className='container mx-auto px-5 pb-40'>
         <div
